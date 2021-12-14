@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp lồng nhau sử dụng vòng lặp while</title>
+</head>
+<body>
+<script>
+    debugger
+    let keBang= '<table border="1" width="300" cellpadding="3" cellspacing="0">'
+    let i=1;
+    let j=1;
+    while (i<=10) {
+        keBang+= '<tr>';
+        while (j<=10){
+            keBang+= '<td>'+ i*j+ '</td>';
+            j++;
+        }
+        keBang+= '</tr>';
+        //Tại sao cho thêm j=1 thì lại chạy đúng?
+        j=1;
+        i++;
+    }
+    keBang+= '</table>';
+    document.write(keBang);
+
+
+</script>
+</body>
+</html>
